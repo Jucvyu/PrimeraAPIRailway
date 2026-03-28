@@ -18,9 +18,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/users', userRoutes);
 
-const PORT = process.env.PORT || 8080;
-
-console.log("PORT:", PORT);
+const PORT = process.env.PORT;
 
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Servidor corriendo en el puerto ${PORT}`);
