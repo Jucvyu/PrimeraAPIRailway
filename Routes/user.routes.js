@@ -3,6 +3,7 @@ const router = express.Router();
 
 const {
     getUsers,
+    getUserByID,
     createUser,
     updateUser,
     deleteUser
@@ -10,6 +11,8 @@ const {
 
 // Obtemos todos los usuarios
 router.get('/', getUsers);
+
+router.get('/:id', getUserByID);
 
 // Creamos un nuevo usuario
 router.post('/', createUser);
